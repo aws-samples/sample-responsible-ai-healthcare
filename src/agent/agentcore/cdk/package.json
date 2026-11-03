@@ -1,0 +1,30 @@
+{
+  "name": "agentcore-cdk-app",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "npm run build && node --test dist/test/*.test.js",
+    "nag": "npm run build && node --test dist/test/cdk-nag.test.js",
+    "cdk": "npm run build && cdk",
+    "clean": "rm -rf dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "aws-cdk": "2.1145.0",
+    "cdk-nag": "2.38.2",
+    "prettier": "^3.4.2",
+    "typescript": "~5.9.3"
+  },
+  "overrides": {
+    "js-yaml": "^4.1.2",
+    "brace-expansion": "^5.0.6"
+  },
+  "dependencies": {
+    "@aws/agentcore-cdk": "0.1.0-alpha.33",
+    "aws-cdk-lib": "2.273.0",
+    "constructs": "^10.0.0"
+  }
+}

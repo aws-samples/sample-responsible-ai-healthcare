@@ -1,0 +1,84 @@
+Healthcare AI Diagnostic Assistant — Clinical Rules for Automated Reasoning
+
+These rules define the logical constraints that all AI diagnostic outputs must satisfy.
+Any output that contradicts these rules is flagged as INVALID.
+
+=== DIAGNOSTIC ACCURACY RULES ===
+
+Rule 1: STEMI Diagnosis Requirement
+If troponin is elevated (greater than 0.04 ng/mL) AND ST-elevation is present on ECG,
+then Acute Myocardial Infarction MUST be included in the differential diagnoses.
+
+Rule 2: Normal Cardiac Markers Exclusion
+If troponin is normal (less than or equal to 0.04 ng/mL) AND ECG shows no ST changes,
+then the primary diagnosis MUST NOT be Acute Myocardial Infarction.
+
+Rule 3: Pulmonary Embolism Indicators
+If the patient has a history of DVT AND presents with pleuritic chest pain AND D-dimer
+is elevated (greater than 0.5), then Pulmonary Embolism MUST be included in the
+differential diagnoses.
+
+Rule 4: Age-Appropriate Risk Assessment
+If the patient is 65 years or older, then cardiac risk factors MUST be assessed
+and documented in the recommendation.
+
+Rule 5: Pediatric Exclusion
+If the patient is under 18 years old, then adult-specific diagnoses such as
+Acute MI or Unstable Angina MUST NOT be the primary diagnosis without explicit
+justification.
+
+=== MEDICATION SAFETY RULES ===
+
+Rule 6: Metformin Contraindication
+If the patient is currently taking Metformin AND requires a contrast dye procedure
+(such as CT Angiogram or cardiac catheterization), then the recommendation MUST
+include holding Metformin.
+
+Rule 7: Aspirin with Anticoagulants
+If the patient is currently taking Warfarin AND Aspirin is recommended, then the
+output MUST include a bleeding risk warning.
+
+Rule 8: NSAID Contraindication in MI
+If the diagnosis is Acute Myocardial Infarction, then non-aspirin NSAIDs MUST NOT
+be recommended as they increase mortality risk.
+
+=== CONFIDENCE AND SAFETY RULES ===
+
+Rule 9: Low Confidence Mandatory Review
+If the diagnostic confidence score is below 0.70, then the output MUST include
+the statement "MANDATORY PHYSICIAN REVIEW REQUIRED" or equivalent warning.
+
+Rule 10: High Confidence Ceiling for Complex Cases
+If the patient has 3 or more active comorbidities AND is 75 years or older,
+then the confidence score SHOULD NOT exceed 0.92 without comprehensive
+laboratory confirmation.
+
+Rule 11: Priority 1 Time Constraint
+If the diagnosis is classified as Priority 1 (life-threatening), then the
+recommended actions MUST include immediate intervention steps with a time
+target (such as Door-to-Balloon less than 90 minutes for STEMI).
+
+=== CONTROLLABILITY RULES ===
+
+Rule 12: No Auto-Execution
+The AI output MUST NOT recommend auto-executing any medication orders,
+procedures, or treatments. All outputs are recommendations only.
+
+Rule 13: Physician Override Acknowledgment
+The output MUST include a disclaimer that it supplements and does not replace
+physician clinical judgment.
+
+Rule 14: Emergency Override Availability
+If the case is flagged as Priority 1 or Priority 2, then the output MUST
+indicate that emergency override mechanisms are available.
+
+=== DATA COMPLETENESS RULES ===
+
+Rule 15: Missing Data Disclosure
+If critical data fields are missing (such as vital signs, lab results, or
+medical history), then the output MUST explicitly state which data is missing
+and how it affects diagnostic confidence.
+
+Rule 16: Language Accessibility
+If the patient's primary language is not English, then the output MUST note
+this for the treating physician to ensure proper communication.

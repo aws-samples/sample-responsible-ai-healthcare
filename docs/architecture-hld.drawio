@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="DrawioJSAPI/1.0.0">
+  <diagram id="diagram-1" name="HLD">
+    <mxGraphModel dx="1106" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;align=center;verticalAlign=middle;strokeColor=none;fillColor=none;fontSize=16;fontColor=#232F3E;fontStyle=1;" value="AI-Powered Healthcare Diagnostic Assistant — High Level Design" vertex="1">
+          <mxGeometry height="35" width="900" x="100" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="patient" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#2E7D32;fontSize=11;verticalAlign=middle;align=center;" value="&lt;b&gt;Patient Data&lt;/b&gt;&lt;br&gt;(Synthetic Cardiac)" vertex="1">
+          <mxGeometry height="80" width="180" x="100" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="diagnostic" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#116D5B;fontSize=11;verticalAlign=middle;align=center;strokeWidth=2;" value="&lt;b&gt;AI Diagnostic Agent&lt;/b&gt;&lt;br&gt;Clinical decision support&lt;br&gt;with guardrails" vertex="1">
+          <mxGeometry height="80" width="200" x="450" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="bias" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#C8E6C9;strokeColor=#01A88D;fontSize=11;verticalAlign=middle;align=center;strokeWidth=2;" value="&lt;b&gt;Bias, SHAP + LLM evaluation&lt;/b&gt;&lt;br&gt;SageMaker AI Processing job&lt;br&gt;+ Bedrock Evaluations" vertex="1">
+          <mxGeometry height="80" width="200" x="450" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="physician" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#6A1B9A;fontSize=11;verticalAlign=middle;align=center;" value="&lt;b&gt;Physician&lt;/b&gt;&lt;br&gt;Reviews AI output&lt;br&gt;Accept / Override" vertex="1">
+          <mxGeometry height="80" width="160" x="800" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="monitoring" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#E7157B;fontSize=11;verticalAlign=middle;align=center;" value="&lt;b&gt;Monitoring&lt;/b&gt;&lt;br&gt;Observability +&lt;br&gt;Alerts on drift" vertex="1">
+          <mxGeometry height="80" width="160" x="800" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="2" edge="1" parent="1" source="patient" style="endArrow=classic;rounded=1;strokeColor=#116D5B;strokeWidth=2" target="diagnostic" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3" edge="1" parent="1" source="patient" style="endArrow=classic;rounded=1;strokeColor=#01A88D;strokeWidth=2" target="bias" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="4" edge="1" parent="1" source="diagnostic" style="endArrow=classic;rounded=1;strokeColor=#116D5B;strokeWidth=2" target="physician" value="Recommendation + Confidence">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="5" edge="1" parent="1" source="bias" style="endArrow=classic;rounded=1;strokeColor=#01A88D;strokeWidth=2" target="monitoring" value="Metrics">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6" edge="1" parent="1" source="diagnostic" style="dashed=1;endArrow=classic;strokeColor=#E7157B;strokeWidth=1" target="monitoring" value="Low confidence alert">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

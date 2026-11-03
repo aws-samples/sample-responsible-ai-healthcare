@@ -1,0 +1,116 @@
+** Third-Party Licenses **
+
+This sample code depends on the following third-party packages. They are fetched
+at install time (pip / npm) and are NOT bundled in this repository.
+
+----------------------------------------------------------------------
+
+Python dependencies (pip):
+
+Name: boto3
+License: Apache License 2.0
+Copyright: Amazon Web Services, Inc.
+URL: https://github.com/boto/boto3
+Declared in: requirements.txt
+
+Name: botocore
+License: Apache License 2.0
+Copyright: Amazon Web Services, Inc.
+URL: https://github.com/boto/botocore
+Declared in: src/agent/requirements.txt
+
+Name: pandas
+License: BSD 3-Clause License
+Copyright: pandas Development Team
+URL: https://github.com/pandas-dev/pandas
+Declared in: requirements.txt
+
+Name: numpy
+License: BSD 3-Clause License
+Copyright: NumPy Developers
+URL: https://github.com/numpy/numpy
+Declared in: requirements.txt
+
+Name: scikit-learn
+License: BSD 3-Clause License
+Copyright: The scikit-learn developers
+URL: https://github.com/scikit-learn/scikit-learn
+Declared in: requirements.txt
+
+Name: shap
+License: MIT License
+Copyright: Scott Lundberg
+URL: https://github.com/shap/shap
+Declared in: src/bias_detection/requirements.txt
+
+Name: mlflow-skinny
+License: Apache License 2.0
+Copyright: Databricks, Inc.
+URL: https://github.com/mlflow/mlflow
+Declared in: src/bias_detection/requirements.txt
+
+Name: sagemaker-mlflow
+License: Apache License 2.0
+Copyright: Amazon Web Services, Inc.
+URL: https://github.com/aws/sagemaker-mlflow
+Declared in: src/bias_detection/requirements.txt
+
+Name: starlette
+License: BSD 3-Clause License
+Copyright: Encode OSS Ltd.
+URL: https://github.com/encode/starlette
+Declared in: requirements.txt (transitive, pinned for CVE fixes)
+
+----------------------------------------------------------------------
+
+AgentCore agent runtime dependencies (pip, src/agent/requirements.txt and
+src/agent/pyproject.toml; packaged into the AgentCore runtime at deploy time):
+
+Name: strands-agents
+License: Apache License 2.0
+Copyright: Amazon.com, Inc. or its affiliates
+URL: https://github.com/strands-agents/harness-sdk
+
+Name: bedrock-agentcore
+License: Apache License 2.0
+Copyright: Amazon.com, Inc. or its affiliates
+URL: https://github.com/aws/bedrock-agentcore-sdk-python
+
+Name: mcp
+License: MIT License
+Copyright: Anthropic, PBC
+URL: https://github.com/modelcontextprotocol/python-sdk
+
+Name: aws-opentelemetry-distro
+License: Apache License 2.0
+Copyright: Amazon.com, Inc. or its affiliates
+URL: https://github.com/aws-observability/aws-otel-python-instrumentation
+
+----------------------------------------------------------------------
+
+AgentCore CDK dependencies (npm, src/agent/agentcore/cdk/package.json):
+
+Name: aws-cdk-lib
+License: Apache License 2.0
+Copyright: Amazon Web Services, Inc.
+URL: https://github.com/aws/aws-cdk
+
+Name: @aws/agentcore-cdk
+License: Apache License 2.0
+Copyright: Amazon Web Services, Inc.
+URL: https://github.com/aws/agentcore-l3-cdk-constructs
+
+Name: constructs
+License: Apache License 2.0
+Copyright: Amazon Web Services, Inc.
+URL: https://github.com/aws/constructs
+
+Name: cdk-nag (development only)
+License: Apache License 2.0
+Copyright: Amazon Web Services, Inc.
+URL: https://github.com/cdklabs/cdk-nag
+
+Name: aws-cdk (CLI, development only)
+License: Apache License 2.0
+Copyright: Amazon Web Services, Inc.
+URL: https://github.com/aws/aws-cdk-cli

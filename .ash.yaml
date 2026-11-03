@@ -1,0 +1,50 @@
+# Automated Security Helper (ASH) configuration
+# Docs: https://awslabs.github.io/automated-security-helper/docs/configuration-guide/
+#
+# This file narrows the scan set to the repository's own source and carries one
+# time-boxed suppression (SECURITY.md, "minimatch in aws-cdk-lib"): a medium CVE in a
+# dependency bundled inside aws-cdk-lib, which npm overrides cannot replace and whose
+# vulnerable code path aws-cdk-lib never enables. It expires so the scan fails again
+# if it is still present. No other rule is silenced. Every `ignore_paths` entry is a
+# generated or third-party tree that is produced by a build/install step and is
+# git-ignored, plus the never-tracked agent notes directory. Findings in tracked
+# source — scripts/, infra/, src/, tests/, config.py — stay in scope and must be
+# fixed, not ignored.
+#
+# One scanner-level setting: bandit reads `[tool.bandit]` in pyproject.toml, the
+# same config `make security-scan` uses, so both runs scan the same files. That
+# config excludes tests/ from bandit only, as a path. Every bandit finding there is
+# B101 (assert_used), which is how pytest asserts. No bandit test ID is skipped, and
+# every other scanner still covers tests/.
+project_name: sample-responsible-ai-healthcare
+
+fail_on_findings: true
+
+global_settings:
+  severity_threshold: MEDIUM
+
+  ignore_paths:
+    - path: src/agent/agentcore/cdk/node_modules/
+      reason: Third-party npm packages installed by `npm install`; git-ignored, not this sample's source.
+    - path: src/agent/agentcore/.cache/
+      reason: Generated AgentCore build cache (uv-installed agent dependencies staged for bundling); git-ignored.
+    - path: infra/.terraform/
+      reason: Terraform provider plugins and modules downloaded by `terraform init`; git-ignored vendor binaries.
+    - path: src/agent/agentcore/cdk/cdk.out/
+      reason: Generated CDK cloud assembly output from `cdk synth`; git-ignored build artifact.
+    - path: .venv/
+      reason: Generated Python virtual environment with third-party packages; git-ignored.
+    - path: .agents/
+      reason: Agent working notes, plans and evidence. Never tracked by git and never published; not part of the sample.
+
+  suppressions:
+    # SECURITY EXCEPTION: GHSA-g3hv-75wg-m249 (CVE-2026-118764) in minimatch 10.2.5, bundled in aws-cdk-lib; not reachable (optimizationLevel is never >= 2), synth-time only - Approved by the repository owner on 2026-10-31
+    - path: src/agent/agentcore/cdk/package-lock.json
+      rule_id: GHSA-g3hv-75wg-m249-minimatch
+      reason: minimatch 10.2.5 is bundled inside aws-cdk-lib (overrides cannot replace it); the fix is 11.0.1, which no aws-cdk-lib release bundles yet; aws-cdk-lib never sets optimizationLevel >= 2, the precondition of the advisory, and runs only at cdk synth with this repository's own patterns. Remove when aws-cdk-lib bundles minimatch >= 11.0.1.
+      expiration: "2027-01-31"
+
+scanners:
+  bandit:
+    options:
+      config_file: pyproject.toml

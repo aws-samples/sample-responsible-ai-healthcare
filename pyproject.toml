@@ -1,0 +1,78 @@
+# This file configures development tooling only.
+# This sample is NOT a publishable package — per aws-samples policy,
+# sample code must not be published to package indexes (PyPI, npm, etc.).
+
+[project]
+name = "sample-responsible-ai-healthcare"
+version = "1.0.0"
+description = "AWS sample demonstrating Responsible AI for healthcare diagnostics"
+readme = "README.md"
+license = {text = "MIT-0"}
+requires-python = ">=3.11"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=9.0.3,<10.0",  # >=9.0.3: PYSEC-2026-1845
+    "pytest-cov>=5.0,<8.0",
+    "ruff>=0.4,<1.0",
+    "mypy>=1.10,<3.0",
+    "bandit>=1.7,<2.0",
+    "pre-commit>=3.7,<5.0",
+    "pip-audit>=2.10,<3.0",
+]
+
+# --- Ruff (linter + formatter) -----------------------------------------------
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "S", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = ["S101"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+# --- Mypy (type checking) ----------------------------------------------------
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+check_untyped_defs = true
+
+# --- Pytest -------------------------------------------------------------------
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
+# --- Bandit (security) --------------------------------------------------------
+
+[tool.bandit]
+# Read when bandit is invoked with `-c pyproject.toml` (Makefile `security-scan`) and by
+# ASH, whose bandit scanner is pointed here by `.ash.yaml`.
+#
+# Two kinds of entry below:
+#   - "tests" is the one TRACKED path excluded here. Every bandit finding in it is B101
+#     (assert_used), which is how pytest expresses an assertion. This is a PATH exclusion,
+#     not a rule skip — no bandit test ID is disabled, so B101 still reports anywhere else.
+#     Scanning tests/ instead would require `--skip B101`, a global suppression. ASH's
+#     other scanners still cover tests/ (see SECURITY.md).
+#   - the rest are generated/third-party trees produced by npm install, uv, cdk synth and
+#     terraform init — none is tracked by git.
+#
+# Findings in scripts/, infra/, src/ and config.py stay in scope.
+exclude_dirs = [
+    "tests",
+    ".venv",
+    "src/agent/agentcore/cdk/node_modules",
+    "src/agent/agentcore/.cache",
+    "src/agent/agentcore/cdk/cdk.out",
+    "infra/.terraform",
+]

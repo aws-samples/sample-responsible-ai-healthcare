@@ -1,0 +1,68 @@
+Cardiac Risk Assessment Guidelines
+Reference: Framingham Heart Study, ACC/AHA Risk Assessment 2019
+
+FRAMINGHAM RISK SCORE:
+Factors assessed:
+- Age (points increase with age, especially > 55)
+- Total cholesterol level
+- HDL cholesterol level
+- Systolic blood pressure
+- Treatment for hypertension (yes/no)
+- Smoking status (current smoker)
+- Diabetes mellitus
+
+Risk Categories:
+- Low risk: < 10% 10-year cardiovascular event risk
+- Moderate risk: 10-20% 10-year risk
+- High risk: > 20% 10-year risk
+
+TROPONIN INTERPRETATION:
+- Normal: < 0.04 ng/mL (high-sensitivity assay)
+- Borderline: 0.04 - 0.10 ng/mL (repeat in 3-6 hours)
+- Elevated: > 0.10 ng/mL (suggests myocardial injury)
+- Significantly elevated: > 1.0 ng/mL (high probability of MI)
+- Markedly elevated: > 2.0 ng/mL (large MI, poor prognosis)
+
+Serial troponin measurement:
+- Rise and/or fall pattern required for acute MI diagnosis
+- Repeat at 3 hours and 6 hours from presentation
+- Delta change > 20% suggests acute process
+
+ECG INTERPRETATION FOR ACUTE CORONARY SYNDROME:
+- ST-elevation: Acute STEMI — emergent intervention required
+- ST-depression: NSTEMI or unstable angina — urgent evaluation
+- T-wave inversion: Ischemia — further workup needed
+- Normal ECG: Does NOT rule out ACS (sensitivity ~50%)
+- New LBBB: Treat as STEMI equivalent
+
+CHEST PAIN RISK STRATIFICATION (HEART Score):
+- History: Highly suspicious (2), Moderately suspicious (1), Slightly suspicious (0)
+- ECG: Significant ST-deviation (2), Non-specific changes (1), Normal (0)
+- Age: >= 65 (2), 45-65 (1), < 45 (0)
+- Risk factors: >= 3 or history of atherosclerosis (2), 1-2 (1), None (0)
+- Troponin: > 3x normal (2), 1-3x normal (1), Normal (0)
+
+Score interpretation:
+- 0-3: Low risk (< 2% MACE at 6 weeks) — consider discharge
+- 4-6: Moderate risk — observation and further testing
+- 7-10: High risk (> 50% MACE) — admit, aggressive management
+
+D-DIMER INTERPRETATION (for Pulmonary Embolism):
+- Normal: < 0.5 mg/L (age-adjusted: age/100 for patients > 50)
+- Elevated: Suggests possible VTE but not specific
+- High sensitivity (> 95%) but low specificity (~ 40%)
+- Use with Wells Score or Geneva Score for clinical decision
+
+WELLS SCORE FOR PULMONARY EMBOLISM:
+- Clinical signs of DVT: 3 points
+- PE most likely diagnosis: 3 points
+- Heart rate > 100: 1.5 points
+- Immobilization/surgery in past 4 weeks: 1.5 points
+- Previous DVT/PE: 1.5 points
+- Hemoptysis: 1 point
+- Active cancer: 1 point
+
+Interpretation:
+- Low probability (0-1): PE unlikely, D-dimer to rule out
+- Moderate probability (2-6): Further imaging needed
+- High probability (> 6): CT pulmonary angiography indicated

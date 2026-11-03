@@ -1,0 +1,28 @@
+# =============================================================================
+# RAI Healthcare Demo — Terraform Variables
+# =============================================================================
+# Copy this file to terraform.tfvars and fill in your values:
+#   cp terraform.tfvars.example terraform.tfvars
+# =============================================================================
+
+# AWS region for deployment (must have Bedrock model access enabled)
+aws_region = "us-east-1"
+
+# Project name (used in all resource names and tags)
+project_name = "rai-healthcare-demo"
+
+# Environment identifier
+environment = "demo"
+
+# Bedrock foundation model ID (used in IAM policies for model access scoping)
+bedrock_model_id = "anthropic.claude-sonnet-4-6"
+
+# Confidence threshold below which CloudWatch alarms trigger.
+# A PERCENT (50-100) — the CloudWatch metric DiagnosticConfidence is published in
+# percent. Terraform divides this by 100 to set the Lambda's CONFIDENCE_THRESHOLD,
+# which is a fraction in [0.50, 1.0] and fails startup outside that range.
+confidence_threshold = 70
+
+# Email address for CloudWatch alarm notifications via SNS
+# Leave empty ("") to skip email subscription; you can add it later
+alarm_email = ""

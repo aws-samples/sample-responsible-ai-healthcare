@@ -1,0 +1,7 @@
+# SECURITY EXCEPTION: CVE-2026-118764 (GHSA-g3hv-75wg-m249) in minimatch 10.2.5, bundled inside
+# aws-cdk-lib (npm overrides cannot replace a bundled dependency). Not reachable: the advisory
+# requires optimizationLevel >= 2, which aws-cdk-lib never sets, and the CDK app runs only at
+# synth time with this repository's own glob patterns. The fix (11.0.1) is in no aws-cdk-lib
+# release yet. Expires so the scan fails again if it is still present. See SECURITY.md.
+# Approved by the repository owner on 2026-10-31
+CVE-2026-118764 exp:2027-01-31

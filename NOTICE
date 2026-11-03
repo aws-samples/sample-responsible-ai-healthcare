@@ -1,0 +1,33 @@
+AWS Responsible AI Healthcare Diagnostic Assistant Demo
+Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+
+This project includes software developed by Amazon.com, Inc.
+
+HEALTHCARE DISCLAIMER
+=====================
+This software is NOT a medical device. It has not been cleared, approved, or
+certified by the U.S. Food and Drug Administration (FDA), European Conformity
+(CE), or any other regulatory authority. It is provided solely for educational
+and demonstration purposes to illustrate Responsible AI patterns on AWS.
+
+This software MUST NOT be used for:
+- Clinical decision-making or patient care
+- Processing real Protected Health Information (PHI)
+- Processing real Personally Identifiable Information (PII)
+- Any purpose requiring regulatory approval or clinical validation
+
+All patient data included in this repository is entirely SYNTHETIC. No real
+patient records, medical histories, or health information were used at any
+stage of development.
+
+DATA HANDLING
+=============
+Do not input real patient data into this system. The architecture as deployed
+by this sample is not configured for HIPAA compliance and does not implement
+all controls required for handling real PHI in production environments.
+
+For production healthcare AI deployments, consult:
+- AWS HIPAA Eligible Services: https://aws.amazon.com/compliance/hipaa-eligible-services-reference/
+- AWS Well-Architected Framework (Healthcare Lens)
+- Applicable regulatory guidance (FDA, HIPAA, GDPR, local jurisdiction)
+- Qualified legal and compliance counsel

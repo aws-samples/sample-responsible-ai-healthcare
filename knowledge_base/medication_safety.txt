@@ -1,0 +1,80 @@
+Medication Safety Guidelines for AI Diagnostic Assistant
+Reference: FDA, AHA, ADA, Clinical Pharmacology Standards
+
+CRITICAL DRUG INTERACTIONS AND CONTRAINDICATIONS:
+
+1. METFORMIN:
+   - HOLD before iodinated contrast procedures (CT angiogram, cardiac catheterization)
+   - Risk: Lactic acidosis, especially with renal impairment
+   - Hold 48 hours before AND after contrast administration
+   - Resume only after renal function confirmed stable (eGFR > 30)
+   - Also hold if: hemodynamic instability, sepsis, acute heart failure
+
+2. ASPIRIN IN ACUTE MI:
+   - GIVE immediately: 162-325mg chewed (not enteric-coated)
+   - Safe with: ACE inhibitors, beta-blockers, statins
+   - Caution with: Warfarin (increased bleeding risk — monitor INR)
+   - Contraindicated if: Active GI bleeding, known aspirin allergy, severe thrombocytopenia
+
+3. NSAIDs (Non-Aspirin) IN ACUTE MI:
+   - CONTRAINDICATED in acute myocardial infarction
+   - Increase mortality risk (AHA Class III — Harm)
+   - Includes: Ibuprofen, Naproxen, Diclofenac, Celecoxib
+   - Exception: Low-dose aspirin is NOT an NSAID for this purpose
+   - If patient is on chronic NSAIDs: DISCONTINUE immediately in acute MI
+
+4. BETA-BLOCKERS:
+   - Indicated within 24 hours of MI (if no contraindications)
+   - Contraindicated if: HR < 60, SBP < 100, severe asthma, acute heart failure (Killip III-IV)
+   - Caution with: Calcium channel blockers (additive bradycardia)
+   - Common agents: Metoprolol, Carvedilol, Bisoprolol
+
+5. ACE INHIBITORS:
+   - Start within 24 hours of MI (especially if EF < 40%)
+   - Contraindicated if: SBP < 90, bilateral renal artery stenosis, pregnancy, angioedema history
+   - Monitor: Potassium (hyperkalemia risk), creatinine
+   - Caution with: Potassium supplements, potassium-sparing diuretics
+
+6. ANTICOAGULANTS IN ACS:
+   - Heparin (UFH): Weight-based dosing, monitor aPTT
+   - Enoxaparin: Adjust for renal function (CrCl < 30: reduce dose)
+   - Bivalirudin: Alternative if heparin-induced thrombocytopenia (HIT)
+   - DO NOT combine multiple anticoagulants without clear indication
+
+7. OPIOIDS (Morphine):
+   - Use with caution in acute MI (may increase mortality per some studies)
+   - Indicated for: Severe pain unresponsive to nitroglycerin
+   - Monitor: Respiratory depression, hypotension
+   - Naloxone should be available
+
+8. NITROGLYCERIN:
+   - Contraindicated if: SBP < 90, right ventricular MI, recent PDE5 inhibitor use (Viagra/Cialis within 24-48h)
+   - Route: Sublingual first, then IV if persistent pain
+   - Monitor: Blood pressure (can cause severe hypotension)
+
+SPECIAL POPULATIONS — MEDICATION ADJUSTMENTS:
+
+Elderly (> 75 years):
+- Reduce anticoagulant doses (higher bleeding risk)
+- Start medications at lower doses
+- Monitor renal function more frequently
+- Fall risk assessment before anticoagulation
+
+Diabetic patients:
+- Hold Metformin peri-procedure
+- Monitor glucose closely (stress hyperglycemia common in MI)
+- Insulin may be needed temporarily
+- Avoid hypoglycemia (increases mortality in ACS)
+
+Renal impairment:
+- Adjust all renally-cleared medications
+- Contrast-induced nephropathy prevention: IV hydration
+- Avoid gadolinium if eGFR < 30
+- Monitor electrolytes closely
+
+MEDICATION RECONCILIATION REQUIREMENTS:
+- Document ALL current medications before AI recommendation
+- Check for interactions with proposed treatments
+- Verify allergies and adverse reaction history
+- Confirm medication adherence status
+- Note any recent medication changes (within 30 days)

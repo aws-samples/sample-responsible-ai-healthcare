@@ -1,0 +1,49 @@
+AHA/ACC Guidelines for ST-Elevation Myocardial Infarction (STEMI) Management
+Reference: 2013 ACCF/AHA Guideline, 2022 Update
+
+DIAGNOSIS CRITERIA:
+- ST-elevation >= 1mm in 2 or more contiguous leads on 12-lead ECG
+- New or presumed new left bundle branch block (LBBB)
+- Elevated cardiac biomarkers (troponin I or T above 99th percentile)
+- Clinical presentation: chest pain, diaphoresis, dyspnea, radiation to arm/jaw
+
+IMMEDIATE MANAGEMENT (Class I Recommendations):
+- Activate cardiac catheterization lab immediately
+- Target Door-to-Balloon (D2B) time: < 90 minutes
+- Aspirin 162-325mg chewed immediately (unless contraindicated)
+- P2Y12 inhibitor loading dose (Ticagrelor 180mg or Clopidogrel 600mg)
+- Anticoagulation: Unfractionated Heparin (UFH) weight-based protocol
+- Supplemental oxygen ONLY if SpO2 < 90%
+- Morphine for pain if needed (use with caution — may increase mortality)
+- Nitroglycerin sublingual (contraindicated if systolic BP < 90 or right ventricular MI)
+
+PRIMARY PCI (Percutaneous Coronary Intervention):
+- Preferred reperfusion strategy when available within 120 minutes of first medical contact
+- Radial access preferred over femoral (lower bleeding risk)
+- Drug-eluting stent preferred over bare metal stent
+- Complete revascularization may be considered for multivessel disease
+
+FIBRINOLYTIC THERAPY:
+- Only if PCI not available within 120 minutes
+- Door-to-needle time target: < 30 minutes
+- Contraindications: active bleeding, recent surgery, stroke history, aortic dissection
+
+POST-MI MANAGEMENT:
+- Dual antiplatelet therapy (DAPT) for minimum 12 months
+- Beta-blocker within 24 hours (if no contraindications)
+- ACE inhibitor within 24 hours (especially if EF < 40%)
+- High-intensity statin therapy
+- Cardiac rehabilitation referral
+- Echocardiogram to assess LV function
+
+RISK STRATIFICATION:
+- TIMI Risk Score for STEMI (0-14 points)
+- GRACE Score for in-hospital mortality
+- Killip Classification for heart failure severity
+- Factors: age, heart rate, systolic BP, Killip class, anterior MI, time to treatment
+
+SPECIAL POPULATIONS:
+- Elderly (>75): Higher bleeding risk, adjust anticoagulation
+- Diabetic patients: Higher mortality, aggressive glucose control
+- Renal insufficiency: Contrast-induced nephropathy risk, hydration protocol
+- Women: May present atypically, same treatment standards apply

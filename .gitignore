@@ -1,0 +1,159 @@
+################################################################################
+# RAI Healthcare Demo - .gitignore
+################################################################################
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+*.egg
+dist/
+build/
+*.whl
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.Python
+develop-eggs/
+downloads/
+eggs/
+# Leading slash matters: an unanchored `lib/` matches at ANY depth, which pulls the
+# three TRACKED CDK sources under src/agent/agentcore/cdk/lib/ out of the file set of
+# any scanner that reads this file. The negation below keeps git itself correct, but
+# third-party scanners commonly honour the pattern and not the negation, so the fix is
+# the anchor, not the negation.
+/lib/
+!src/agent/agentcore/cdk/lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+
+# Virtual environments
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.yarn-integrity
+
+# IDE
+.vs/
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+*.sublime-project
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Terraform
+infra/.terraform/
+*.tfstate
+*.tfstate.backup
+infra/*.tfstate
+infra/*.tfstate.backup
+infra/*.tfplan
+infra/terraform.tfvars
+infra/crash.log
+
+# Lambda build artifacts
+src/lambda/preprocessing/lambda.zip
+
+# CDK build artifacts (AgentCore project layout: src/agent/agentcore/cdk/)
+src/agent/agentcore/cdk/dist/
+src/agent/agentcore/cdk/cdk.out/
+src/agent/agentcore/cdk/node_modules/
+
+# AgentCore CLI artifacts
+src/agent/agentcore/.cache/
+src/agent/agentcore/.cli/
+# AgentCore deployment targets — carries a real 12-digit account id.
+# Copy aws-targets.json.example and fill in your own account before deploying.
+src/agent/agentcore/aws-targets.json
+
+# Pytest
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+nosetests.xml
+
+# Temp files from deployment
+policy.json
+test_staging/
+
+# Secrets and credentials
+*.pem
+*.key
+credentials.json
+.env.local
+
+# Claude Code
+.claude/
+CLAUDE.md
+
+# Agent orchestration notes, plans and evidence (local only, never published)
+.agents/
+
+# ASH scan output
+.ash/
+
+# Learning notes (personal)
+learning/
+
+# Ruff cache
+.ruff_cache/
+
+# Security scan artifacts (generated locally, not committed)
+security-reviews/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Jupyter
+.ipynb_checkpoints
+
+# Distribution / packaging
+*.tar.gz
+*.zip
+
+# Security scan output (generated locally, never committed)
+ash-scan-output-*/
+*-scan-report-*
+security-review-output-*/
+.kiro/
+
+# Live verification and scan reports (scripts/verify_solution.py, scripts/scan_summary.py)
+.verify-output/
+.verify-plan.log
+.scan-output/

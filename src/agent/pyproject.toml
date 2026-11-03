@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "raihealthdiag"
+version = "0.1.0"
+description = "AgentCore Runtime Application using Strands SDK"
+readme = "README.md"
+requires-python = ">=3.11"
+# Every entry carries an upper bound so a new major release cannot be pulled
+# into the runtime image unreviewed. Keep in sync with requirements.txt.
+dependencies = [
+    "aws-opentelemetry-distro >= 0.21.0, < 1.0.0",
+    "bedrock-agentcore >= 1.18.1, < 2.0.0",
+    "botocore[crt] >= 1.35.0, < 2.0.0",
+    "mcp >= 1.30.0, < 2.0.0",  # CVE-2026-59951
+    "strands-agents >= 1.61.1, < 2.0.0",  # the version deployed and verified live
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

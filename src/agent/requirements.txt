@@ -1,0 +1,12 @@
+# AgentCore Strands Agent — runtime dependencies
+# Install with: pip install -r src/agent/requirements.txt
+# These are separate from the main project requirements because
+# the agent runs on AgentCore runtime, not locally.
+#
+# Every entry carries an upper bound so a new major release cannot be pulled
+# into the runtime image unreviewed. Keep in sync with pyproject.toml.
+bedrock-agentcore>=1.18.1,<2.0.0  # >=1.18.1: PYSEC-2026-3551
+strands-agents>=1.61.1,<2.0.0  # the version deployed and verified live
+botocore[crt]>=1.35.0,<2.0.0
+mcp>=1.30.0,<2.0.0  # >=1.30.0: CVE-2026-59951 (GHSA-84m7-p3x7-pcfv)
+aws-opentelemetry-distro>=0.21.0,<1.0.0
